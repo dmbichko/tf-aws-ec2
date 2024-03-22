@@ -1,6 +1,6 @@
 variable "region" {
   type    = string
-  default = "ap-east-1"
+  default = "us-east-1"
 }
 
 variable "prefix" {
@@ -27,4 +27,7 @@ variable "subnet_cidr_list" {
 
 variable "instance_type" {
   default = "t2.micro"
+}
+variable "key-name" {
+  default = "ec2-aws"
 }
