@@ -20,6 +20,8 @@ resource "aws_instance" "public" {
   vpc_security_group_ids = [aws_security_group.ssh.id, ]
   key_name               = aws_key_pair.instance_key.key_name
   availability_zone      = "${data.aws_region.current.name}a"
+  
+  user_data = filebase64("user-data.sh")
 
   tags = merge(
     local.common_tags,
