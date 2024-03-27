@@ -43,14 +43,14 @@ jobs:
               run: terraform fmt -chek
               continue-on-error: true
             
+            - name: Terraform Init
+              id: init
+              run: terraform init
+
             - name: Terraform Validate
               id: validate
               run: terraform validate -no-color
 
-            - name: Terraform Init
-              id: init
-              run: terraform init
-            
             - name: Terraform Plan
               id: plane
               run: terraform plan
