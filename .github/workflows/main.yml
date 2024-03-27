@@ -49,3 +49,7 @@ jobs:
             - name: Terraform Plan
               id: plane
               run: terraform plan
+            
+            - name: Terrafrom Apply
+              id: apply
+              run: terraform apply -auto-approve
