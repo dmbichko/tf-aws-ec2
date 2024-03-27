@@ -46,6 +46,6 @@ jobs:
               id: init
               run: terraform init
             
-            - name: Terraform Plane
+            - name: Terraform Plan
               id: plane
-              run: terraform plane
+              run: terraform plan
